@@ -16,4 +16,7 @@ app.use(session({
   cookie: { maxAge: 60000 },
 }));
 
+require('./server/config/database');
+app.use(require('./server/config/routes'));
+
 app.listen(port, () => console.log(`app running on port ${port}`));
