@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Avenir, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.navigation {
+  display: inline-block;
+  margin: 10px 0px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: black;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.warning {
+  margin-bottom: 15px;
+  color: red;
+  background-color: gainsboro;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+p, h1 {
+  margin: 10px 0px;;
+}
+
+fieldset {
+  display: inline-block;
+  margin: 15px 0px;
+  padding: 25px;
+}
+
+legend {
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  padding-right: 8px;
+  text-align: right;
+  vertical-align: top;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  font-size: 1em;
+}
+
+button {
+  padding: 5px 15px;
+  font-size: 1em;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+form button {
+  float: right;
+}

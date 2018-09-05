@@ -3,11 +3,87 @@
   <head>
     <meta charset="utf-8">
     <title>Registration</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
     <div class="wrapper">
       <h1>Registration Page</h1>
-      <a href="/">Home</a>
+      <p>Register here if you don't have an account</p>
+      <a class="navigation" href="/">Home</a>
+      <hr>
+      <fieldset>
+        <legend>Register</legend>
+        <form action="/user/register" method="post">
+          <div>
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              <% if ( data.firstName ) { %>
+                value="<%= data.firstName %>"
+              <% } %>
+            >
+          </div>
+          <div>
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+                <% if ( data.lastName ) { %>
+                  value="<%= data.lastName %>"
+                <% } %>
+              >
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              <% if ( data.email ) { %>
+                value="<%= data.email %>"
+              <% } %>
+            >
+          </div>
+          <div>
+            <label for="birthday">Birthday</label>
+            <input
+              type="date"
+              name="birthday"
+              <% if ( data.birthday ) { %>
+                value="<%= data.birthday %>"
+              <% } %>
+            >
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              <% if ( data.password ) { %>
+                value="<%= data.password %>"
+              <% } %>
+            >
+          </div>
+          <div>
+            <label for="passwordConfirm">Confirm Password</label>
+            <input
+              type="password"
+              name="passwordConfirm"
+              <% if ( data.passwordConfirm ) { %>
+                value="<%= data.passwordConfirm %>"
+              <% } %>
+            >
+          </div>
+          <% if ( data.messages ) {%>
+            <div class="warning">
+              <% for ( message of data.messages ) { %>
+                <p><%= message %></p>
+              <% } %>
+            </div>
+          <% } %>
+          <button>Register</button>
+        </form>
+      </fieldset>
     </div>
   </body>
 </html>
