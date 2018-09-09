@@ -12,8 +12,8 @@ module.exports = {
     let messages = [];
     let newUser = new User(request.body);
     newUser.validate(error => {
-      // if there is an error, get the messages
-      // and show them to user
+      // if there are validation errors, get
+      // the messages and show them to user
       if ( error ) {
         messages = Object.keys(error.errors)
           .map(key => error.errors[key].message);
