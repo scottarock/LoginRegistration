@@ -13,7 +13,6 @@ app.use(session({
   secret: 'lkauhjflksa',
   resave: false,
   saveUninitialized: true,
-  cookie: { maxAge: 60000 },
 }));
 
 require('./server/config/database');

@@ -19,7 +19,7 @@
             <input
               type="text"
               name="email"
-              <% if ( data.email ) { %>
+              <% if ( typeof data !== "undefined" ) { %>
                 value="<%= data.email %>"
               <% } %>
             >
@@ -28,9 +28,9 @@
             <label for="">Password</label>
             <input type="password" name="password">
           </div>
-          <% if ( data.messages ) {%>
+          <% if ( typeof messages !== "undefined" ) {%>
             <div class="warning">
-              <% for ( message of data.messages ) { %>
+              <% for ( message of messages ) { %>
                 <p><%= message %></p>
               <% } %>
             </div>

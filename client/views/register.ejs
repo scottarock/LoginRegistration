@@ -19,7 +19,7 @@
             <input
               type="text"
               name="firstName"
-              <% if ( data.firstName ) { %>
+              <% if ( typeof data !== "undefined" ) { %>
                 value="<%= data.firstName %>"
               <% } %>
             >
@@ -29,7 +29,7 @@
             <input
               type="text"
               name="lastName"
-                <% if ( data.lastName ) { %>
+                <% if ( typeof data !== "undefined" ) { %>
                   value="<%= data.lastName %>"
                 <% } %>
               >
@@ -39,7 +39,7 @@
             <input
               type="text"
               name="email"
-              <% if ( data.email ) { %>
+              <% if ( typeof data !== "undefined" ) { %>
                 value="<%= data.email %>"
               <% } %>
             >
@@ -49,7 +49,7 @@
             <input
               type="date"
               name="birthday"
-              <% if ( data.birthday ) { %>
+              <% if ( typeof data !== "undefined" ) { %>
                 value="<%= data.birthday %>"
               <% } %>
             >
@@ -59,7 +59,7 @@
             <input
               type="password"
               name="password"
-              <% if ( data.password ) { %>
+              <% if ( typeof data !== "undefined" ) { %>
                 value="<%= data.password %>"
               <% } %>
             >
@@ -69,14 +69,14 @@
             <input
               type="password"
               name="passwordConfirm"
-              <% if ( data.passwordConfirm ) { %>
+              <% if ( typeof data !== "undefined" ) { %>
                 value="<%= data.passwordConfirm %>"
               <% } %>
             >
           </div>
-          <% if ( data.messages ) {%>
+          <% if ( typeof messages !== "undefined" ) {%>
             <div class="warning">
-              <% for ( message of data.messages ) { %>
+              <% for ( message of messages ) { %>
                 <p><%= message %></p>
               <% } %>
             </div>
